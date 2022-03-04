@@ -4,7 +4,7 @@ const readlineSync = require('readline-sync');
 let firstName = readlineSync.question('Enter first player name: ');
 console.log("Hello " + firstName + " welcome to the game!");
 
-let secondName = readlineSync.question('Enter second player name:clear ');
+let secondName = readlineSync.question('Enter second player name: ');
 console.log("Hello " + secondName + " welcome to the game!");
 
 //Entering first player scores
