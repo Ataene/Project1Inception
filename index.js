@@ -1,10 +1,10 @@
 const readlineSync = require('readline-sync');
 
 //Entering the Names of the players
-let firstName = readlineSync.question('Enter your name please ');
+let firstName = readlineSync.question('Enter first player name: ');
 console.log("Hello " + firstName + " welcome to the game!");
 
-let secondName = readlineSync.question('Enter your name please ');
+let secondName = readlineSync.question('Enter second player name:clear ');
 console.log("Hello " + secondName + " welcome to the game!");
 
 //Entering first player scores
@@ -14,36 +14,30 @@ let addfirstPerson = Math.floor((Math.random()* 100) + 1);
 console.log("Your random number is : " + addfirstPerson);
 
 let addfirstScore = Number(Number(firstScore) + Number(addfirstPerson));
-console.log("Your total number is : " + (addfirstScore));
-
+console.log(firstName + " your total number is : " + (addfirstScore));
 
 //Entering second player scores
 
 let secondScore = readlineSync.question(secondName + ' please enter your score: ');
 let addsecondPerson = Math.floor((Math.random()* 100) + 1);
-console.log("Your random number is : " + addsecondPerson);
+console.log(secondName + " your random number is : " + addsecondPerson);
 
 let addsecondScore = Number(Number(secondScore) + Number(addsecondPerson));
 console.log("Your total number is : " + (addsecondScore));
 
 
+if(addfirstScore > addsecondScore){
 
+    console.log("The Winner is " + firstName);
 
+} else if (addfirstScore < addsecondScore ){
 
+    console.log("The Winner is " + secondName);
+    
+} else if( addfirstScore === addsecondScore) {
 
-
-
-
-
-
-
-if(firstScore > 50 && addfirstPerson > 50 ){
-
-    console.log(`Your score is : ${firstScore + addfirstPerson}`);
-
-} else if (firstScore < 50 && addfirstPerson < 50 ){
-
-    console.log(`Your score is : ${firstScore + addfirstPerson}`);
+    console.log("There is no winner, it's a DRAW, play again");
+    
 }
 
 // function firstPerson(){
