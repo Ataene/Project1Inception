@@ -1,4 +1,16 @@
 const readlineSync = require('readline-sync');
+const express = require("express");
+
+const app = express();
+
+let Port = 3000;
+
+app.get("/", function(req, res){
+
+    res.send("/");
+});
+
+app.listen(Port);
 
 //Entering the Names of the players
 let firstName = readlineSync.question('Enter first player name: ');
