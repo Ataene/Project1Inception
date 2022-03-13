@@ -1,0 +1,10 @@
+When a player wins, diplay and image with the player name.
+Add sound to the winner
+Add typing writing to the frontend
+
+Instruction from AI
+
+Hey everyone, for Project 1 there are a few people that are wanting to go farther and put a fancy user interface into their project.  
+Just to be clear, having a really great user interface attached to a really basic API is not going to get you any bonus points.  
+We would rather see a complex API, perhaps have your API calling another 3rd party API or doing some other more "spicy" stuff.  
+If you are farther ahead in the class then focus on the purpose of the project, in this case you are building an API, and build a really amazing API with lots of functionality rather than building a front-end.  Thanks!

@@ -1,16 +1,18 @@
 const readlineSync = require('readline-sync');
+
 const express = require("express");
+// const party = require("party-js");
 
 const app = express();
 
-let Port = 3000;
+const PORT = 3000;
 
 app.get("/", function(req, res){
 
     res.send("/");
 });
 
-app.listen(Port);
+
 
 //Entering the Names of the players
 let firstName = readlineSync.question('Enter first player name: ');
@@ -38,9 +40,16 @@ let addsecondScore = Number(Number(secondScore) + Number(addsecondPerson));
 console.log("Your total number is : " + (addsecondScore));
 
 
+Winner Celebration
+
+let winnerCelebration = party.confetti(runButton, {
+    count: party.variation.range(20, 40),
+});
+
 if(addfirstScore > addsecondScore){
 
     console.log("The Winner is " + firstName);
+
 
 } else if (addfirstScore < addsecondScore ){
 
@@ -64,5 +73,4 @@ if(addfirstScore > addsecondScore){
 //         console.log("Try again");
 //     }
 // }
-
 
